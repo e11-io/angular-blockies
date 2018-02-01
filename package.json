@@ -1,0 +1,38 @@
+{
+  "name": "angular-blockies",
+  "version": "1.0.1",
+  "description": "A tiny angular module for generating blocky identicons.",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf dist/ && ngc build -p ./tsconfig.json",
+    "release": "npm run build && cp package.json dist/ && cd dist/ && npm publish && cd .."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/e11-io/angular-blockies.git"
+  },
+  "keywords": [
+    "blockies",
+    "angular",
+    "ethereum"
+  ],
+  "author": "Experimental Team <admin@e11.io> ()",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/e11-io/angular-blockies/issues"
+  },
+  "homepage": "https://github.com/e11-io/angular-blockies#readme",
+  "dependencies": {
+    "@angular/common": "^5.x.x",
+    "@angular/core": "^5.x.x",
+    "@angular/forms": "^5.x.x"
+  },
+  "devDependencies": {
+    "@angular/compiler": "^5.x.x",
+    "@angular/compiler-cli": "^5.x.x",
+    "@angular/platform-browser": "^5.x.x",
+    "@types/node": "^8.5.2",
+    "rxjs": "^5.5.6",
+    "typescript": "^2.6.2"
+  }
+}

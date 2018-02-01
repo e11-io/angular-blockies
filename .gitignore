@@ -1,0 +1,14 @@
+# dependencies
+node_modules/
+dist/
+# tsc generated files
+*.map
+*.js
+*.d.ts
+src/*/*.map
+src/*/*.js
+src/*/*.d.ts
+npm-debug.log
+**/*.ngfactory.ts
+**/*.ngsummary.json
+!blockies.min.js
