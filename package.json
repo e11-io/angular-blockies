@@ -1,6 +1,6 @@
 {
   "name": "angular-blockies",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A tiny angular module for generating blocky identicons.",
   "main": "index.js",
   "scripts": {
