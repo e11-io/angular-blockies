@@ -65,6 +65,7 @@ The defaults of size 8 and scale 4 generate 32x32 pixel icons. Below are some st
  * 24x24 `{size: 8, scale: 3}`
  * 50x50 `{size: 5, scale: 10}`
 
+To get the same blocky icon as MEW or Etherscan you have to use: `seed: address.toLowercase()` and `size: 8`
 
 License
 -------
