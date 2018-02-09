@@ -6,6 +6,8 @@ import {
     EventEmitter,
     AfterViewInit,
     NgZone,
+    OnChanges,
+	  SimpleChanges,
 } from '@angular/core';
 import './blockies.lib';
 
@@ -13,7 +15,7 @@ import './blockies.lib';
   template: '<div></div>',
   selector: 'angular-blockies'
 })
-export class BlockiesComponent implements AfterViewInit {
+export class BlockiesComponent implements AfterViewInit, OnChanges {
 
   @Input() options: any;
 
@@ -22,11 +24,22 @@ export class BlockiesComponent implements AfterViewInit {
 
   ngAfterViewInit(){
     setTimeout(() => {
-      this.zone.runOutsideAngular(() => {
-        let canvas = window['blockies'].create(this.options);
-        this.element.nativeElement.appendChild(canvas); // is a canvas element
-      })
+      this.setupBlockies();
     }, 1)
   }
+  ngOnChanges(changes: SimpleChanges) {
+    if(changes.options && changes.options.currentValue !== changes.options.previousValue) {
+      this.setupBlockies();
+    }
+  }
 
+  setupBlockies() {
+    this.zone.runOutsideAngular(() => {
+      let canvas = window['blockies'].create(this.options);
+      while (this.element.nativeElement.firstChild) {
+          this.element.nativeElement.removeChild(this.element.nativeElement.firstChild);
+      }
+      this.element.nativeElement.appendChild(canvas); // is a canvas element
+    })
+  }
 }
