@@ -1,6 +1,6 @@
 {
   "name": "angular-blockies",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A tiny angular module for generating blocky identicons.",
   "main": "index.js",
   "scripts": {
@@ -23,16 +23,16 @@
   },
   "homepage": "https://github.com/e11-io/angular-blockies#readme",
   "dependencies": {
-    "@angular/common": "^5.x.x",
-    "@angular/core": "^5.x.x",
-    "@angular/forms": "^5.x.x"
+    "@angular/common": "^6.x.x",
+    "@angular/core": "^6.x.x",
+    "@angular/forms": "^6.x.x"
   },
   "devDependencies": {
-    "@angular/compiler": "^5.x.x",
-    "@angular/compiler-cli": "^5.x.x",
-    "@angular/platform-browser": "^5.x.x",
-    "@types/node": "^8.5.2",
-    "rxjs": "^5.5.6",
-    "typescript": "^2.6.2"
+    "@angular/compiler": "^6.x.x",
+    "@angular/compiler-cli": "^6.x.x",
+    "@angular/platform-browser": "^6.x.x",
+    "@types/node": "^10.1.2",
+    "rxjs": "^6.1.0",
+    "typescript": "2.7.2"
   }
 }
